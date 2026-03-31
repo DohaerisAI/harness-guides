@@ -86,6 +86,11 @@ nav:
       - "Chapter 10: Terminal UI": blueprint/chapters/terminal-ui.md
       - "Chapter 11: IDE Bridge": blueprint/chapters/ide-bridge.md
       - "Chapter 12: Memory and Cost": blueprint/chapters/memory-and-cost.md
+      - Advanced Patterns:
+          - "Streaming Formats": blueprint/chapters/streaming-formats.md
+          - "YOLO Classifier": blueprint/chapters/yolo-classifier.md
+          - "Model Pricing": blueprint/chapters/model-pricing.md
+          - "Hidden Modes": blueprint/chapters/hidden-modes.md
       - Source Provenance: blueprint/reference-provenance.md
       - Appendix: blueprint/chapters/appendix.md
       - Full Blueprint: blueprint/full-blueprint.md

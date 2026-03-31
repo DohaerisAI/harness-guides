@@ -41,6 +41,13 @@ The blueprint is organized around the major systems inside an agent CLI, but the
 - [Chapter 9: Slash Commands](chapters/slash-commands.md)
 - [Chapter 11: IDE Bridge](chapters/ide-bridge.md)
 
+### Advanced Patterns
+
+- [Streaming Formats](chapters/streaming-formats.md) -- Wire formats and streaming protocols for real-time token delivery
+- [YOLO Classifier](chapters/yolo-classifier.md) -- Automatic tool-approval classification and trust scoring
+- [Model Pricing](chapters/model-pricing.md) -- Token cost tracking, model selection, and budget-aware routing
+- [Hidden Modes](chapters/hidden-modes.md) -- Undocumented operational modes and internal feature flags
+
 ### Operator experience
 
 - [Chapter 4: Bootstrap](chapters/bootstrap.md)
