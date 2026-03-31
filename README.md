@@ -8,6 +8,12 @@ Harness Guides is a public documentation project for engineers studying how seri
 
 The goal is simple: turn dense harness reverse-engineering into docs people can read, reuse, and build from.
 
+## Why this exists now
+
+After public reporting on March 31, 2026 that Claude Code internals were exposed again through npm packaging artifacts, a lot of people suddenly wanted to understand how serious agent harnesses are actually put together.
+
+This repository takes the useful path: study the architecture, extract the patterns, and publish a guide that helps people build better harnesses of their own.
+
 ## What is here
 
 - A full long-form blueprint for building an AI agent CLI

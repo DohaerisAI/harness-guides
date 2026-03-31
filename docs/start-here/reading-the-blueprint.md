@@ -2,6 +2,12 @@
 
 The blueprint is long on purpose. It is closer to an engineering handbook than a blog post.
 
+## Why people are reading it
+
+After the March 31, 2026 reporting around Claude Code internals being publicly exposed again through npm packaging artifacts, a lot of people wanted to understand the underlying harness architecture quickly.
+
+That interest is useful only if it becomes better engineering. This guide is written to turn that moment into reusable runtime knowledge instead of shallow imitation.
+
 ## Best way to use it
 
 Read it in passes:

@@ -47,6 +47,16 @@ The site is designed to help people ship harnesses, not just admire internals.
 
 </div>
 
+## Why this exists now
+
+On March 31, 2026, public reports circulated that Claude Code internals had been exposed again through npm packaging artifacts. That pushed a lot more developers to ask the right question:
+
+not "how do I copy one product?"
+
+but "how do serious agent harnesses actually work?"
+
+Harness Guides exists to answer the second question. The goal is to study the architecture, extract the durable patterns, and turn them into public documentation that helps people build better systems.
+
 ## What every serious harness needs
 
 <div class="hg-grid hg-grid-2" markdown>
