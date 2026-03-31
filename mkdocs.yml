@@ -72,18 +72,18 @@ nav:
       - Reading The Blueprint: start-here/reading-the-blueprint.md
   - Blueprint:
       - Overview: blueprint/index.md
-      - Chapter 1: Tool System: blueprint/chapters/tool-system.md
-      - Chapter 2: Tool Execution Pipeline: blueprint/chapters/tool-execution-pipeline.md
-      - Chapter 3: Query Engine: blueprint/chapters/query-engine.md
-      - Chapter 4: Bootstrap: blueprint/chapters/bootstrap.md
-      - Chapter 5: Permissions: blueprint/chapters/permissions.md
-      - Chapter 6: Session and State: blueprint/chapters/session-and-state.md
-      - Chapter 7: Multi-Agent Orchestration: blueprint/chapters/multi-agent-orchestration.md
-      - Chapter 8: MCP Integration: blueprint/chapters/mcp-integration.md
-      - Chapter 9: Slash Commands: blueprint/chapters/slash-commands.md
-      - Chapter 10: Terminal UI: blueprint/chapters/terminal-ui.md
-      - Chapter 11: IDE Bridge: blueprint/chapters/ide-bridge.md
-      - Chapter 12: Memory and Cost: blueprint/chapters/memory-and-cost.md
+      - "Chapter 1: Tool System": blueprint/chapters/tool-system.md
+      - "Chapter 2: Tool Execution Pipeline": blueprint/chapters/tool-execution-pipeline.md
+      - "Chapter 3: Query Engine": blueprint/chapters/query-engine.md
+      - "Chapter 4: Bootstrap": blueprint/chapters/bootstrap.md
+      - "Chapter 5: Permissions": blueprint/chapters/permissions.md
+      - "Chapter 6: Session and State": blueprint/chapters/session-and-state.md
+      - "Chapter 7: Multi-Agent Orchestration": blueprint/chapters/multi-agent-orchestration.md
+      - "Chapter 8: MCP Integration": blueprint/chapters/mcp-integration.md
+      - "Chapter 9: Slash Commands": blueprint/chapters/slash-commands.md
+      - "Chapter 10: Terminal UI": blueprint/chapters/terminal-ui.md
+      - "Chapter 11: IDE Bridge": blueprint/chapters/ide-bridge.md
+      - "Chapter 12: Memory and Cost": blueprint/chapters/memory-and-cost.md
       - Appendix: blueprint/chapters/appendix.md
       - Full Blueprint: blueprint/full-blueprint.md
   - Build Better:
