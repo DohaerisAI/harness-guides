@@ -1,0 +1,91 @@
+site_name: Harness Guides
+site_description: Build better AI agent harnesses with practical architecture guides, patterns, and implementation notes.
+site_url: https://dohaerisai.github.io/harness-guides/
+repo_url: https://github.com/DohaerisAI/harness-guides
+repo_name: harness-guides
+
+theme:
+  name: material
+  logo: assets/mark.svg
+  favicon: assets/mark.svg
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Space Grotesk
+    code: JetBrains Mono
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/DohaerisAI/harness-guides
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Start Here:
+      - What Is An Agent Harness?: start-here/what-is-an-agent-harness.md
+      - Reading The Blueprint: start-here/reading-the-blueprint.md
+  - Blueprint:
+      - Overview: blueprint/index.md
+      - Chapter 1: Tool System: blueprint/chapters/tool-system.md
+      - Chapter 2: Tool Execution Pipeline: blueprint/chapters/tool-execution-pipeline.md
+      - Chapter 3: Query Engine: blueprint/chapters/query-engine.md
+      - Chapter 4: Bootstrap: blueprint/chapters/bootstrap.md
+      - Chapter 5: Permissions: blueprint/chapters/permissions.md
+      - Chapter 6: Session and State: blueprint/chapters/session-and-state.md
+      - Chapter 7: Multi-Agent Orchestration: blueprint/chapters/multi-agent-orchestration.md
+      - Chapter 8: MCP Integration: blueprint/chapters/mcp-integration.md
+      - Chapter 9: Slash Commands: blueprint/chapters/slash-commands.md
+      - Chapter 10: Terminal UI: blueprint/chapters/terminal-ui.md
+      - Chapter 11: IDE Bridge: blueprint/chapters/ide-bridge.md
+      - Chapter 12: Memory and Cost: blueprint/chapters/memory-and-cost.md
+      - Appendix: blueprint/chapters/appendix.md
+      - Full Blueprint: blueprint/full-blueprint.md
+  - Build Better:
+      - Principles: build-better/principles.md
+      - Publishing Guide: build-better/publishing.md
