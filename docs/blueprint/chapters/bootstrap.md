@@ -1,29 +1,69 @@
 # Chapter 4: Bootstrap And Startup
 
-Bootstrap gets the harness from a cold process to a ready runtime. This chapter covers startup sequencing, deferred initialization, and system prompt assembly.
+Bootstrap gets the harness from a cold process to a ready runtime. In Python, this is the difference between a script that technically runs and a harness that starts predictably.
 
-## What this chapter covers
+## Why this system exists
 
-- the seven-stage startup pipeline
-- prompt assembly at bootstrap time
-- latency hiding through parallel initialization
-- a minimal build-it-yourself recipe
+Startup order decides what the harness trusts, what it knows, and what it exposes before the first user turn. Get it wrong and you create confusion before the loop even begins.
 
-## Why it matters
+## Shared architecture
 
-Startup architecture shapes both first impression and correctness. A harness that initializes the wrong things too early creates trust, performance, and state problems immediately.
+- load config and environment
+- establish working directory and session state
+- build the tool registry
+- assemble instructions or system guidance
+- initialize trust-sensitive integrations late
+- prepare the model loop
 
-## Key ideas
+## Python implementation
 
-- front-load only what is needed for the first turn
-- defer expensive or trust-sensitive work
-- treat prompt assembly as runtime infrastructure
-- use parallel I/O deliberately
+Use a bootstrap function that returns a single runtime object.
 
-## Read the full chapter
+```python
+from dataclasses import dataclass
+
+
+@dataclass
+class Runtime:
+    client: object
+    tool_registry: dict
+    instructions: str
+    session_store: object
+
+
+def bootstrap() -> Runtime:
+    ...
+```
+
+Keep instruction assembly out of ad hoc string-building in random files. It should be one startup responsibility with stable inputs.
+
+## OpenAI Responses API mapping
+
+Bootstrap is where you decide:
+
+- which model to call through `responses.create`
+- which tool definitions are exposed
+- what `instructions` the runtime provides
+- whether background work or streaming is available
+
+Responses API does not remove bootstrap work. It simply gives the runtime a cleaner execution surface once startup is complete.
+
+## Failure modes and tradeoffs
+
+- eager initialization of untrusted plugins or MCP clients
+- instruction assembly spread across the codebase
+- startup side effects hidden in import time
+- no single runtime object to pass into the query loop
+
+## Build-it-yourself checklist
+
+- centralize startup
+- assemble one runtime object
+- defer risky integrations
+- generate instructions deterministically
+- make tool exposure part of bootstrap, not prompt improvisation
+
+## Reference provenance
 
 - [Open this chapter inside the full blueprint](../full-blueprint.md#chapter-4-bootstrap-startup)
-- Key subsections:
-  - `4.1` The 7-Stage Pipeline
-  - `4.2` System Prompt Assembly
-  - `4.3` Build It Yourself
+- the original discovery work here focused on startup sequencing and prompt assembly

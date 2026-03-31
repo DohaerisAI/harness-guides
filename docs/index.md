@@ -6,15 +6,15 @@ Build better AI agent harnesses.
 
 <p class="hg-kicker">Runtime architecture for serious agent builders</p>
 
-<h2>Claude Code got exposed. Here’s the harness blueprint builders actually need.</h2>
+<h2>Claude Code got exposed. Here’s the harness blueprint Python builders actually need.</h2>
 
-<p class="hg-lede">After the March 31, 2026 reporting, a lot of people wanted to know how serious agent runtimes actually work. Harness Guides turns that moment into practical documentation for building better harnesses.</p>
+<p class="hg-lede">After the March 31, 2026 reporting, a lot of people wanted to know how serious agent runtimes actually work. Harness Guides turns that moment into practical, Python-first documentation for building better harnesses, with OpenAI's Responses API as the concrete reference model layer.</p>
 
 <div class="hg-signal-row" markdown>
 
 <span class="hg-signal">12 architecture chapters</span>
-<span class="hg-signal">docs-native dark mode</span>
-<span class="hg-signal">free GitHub Pages deploy</span>
+<span class="hg-signal">python-first examples</span>
+<span class="hg-signal">responses api mapping</span>
 
 </div>
 
@@ -22,7 +22,7 @@ Build better AI agent harnesses.
 
 [Read the Blueprint](blueprint/full-blueprint.md){ .md-button .md-button--primary }
 [Start Building](blueprint/index.md){ .md-button }
-[Start Here](start-here/what-is-an-agent-harness.md){ .md-button }
+[Python Path](start-here/python-path.md){ .md-button }
 
 </div>
 
@@ -36,13 +36,13 @@ From tools and permissions to MCP, bridge protocols, memory, and cost tracking.
 </div>
 
 <div class="hg-panel" markdown>
-### Dark-mode docs
-Built on Material for MkDocs with GitHub Pages deployment and a docs-native UX.
+### Python-first docs
+Every core chapter explains the system in Python terms before pointing back to provenance or portability notes.
 </div>
 
 <div class="hg-panel" markdown>
-### Builder-first
-The site is designed to help people ship harnesses, not just admire internals.
+### Responses API grounded
+OpenAI-specific examples map to the official Responses API instead of legacy chat-completions thinking.
 </div>
 
 </div>
@@ -56,6 +56,15 @@ not "how do I copy one product?"
 but "how do serious agent harnesses actually work?"
 
 Harness Guides exists to answer the second question. The goal is to study the architecture, extract the durable patterns, and turn them into public documentation that helps people build better systems intentionally.
+
+## Python first
+
+The current version of the site is optimized for people building harnesses in Python.
+
+- chapter pages explain the architecture in Python terms first
+- OpenAI examples use the Responses API as the concrete reference
+- the original long-form blueprint remains available as provenance, not the primary teaching surface
+- Rust can still be added later, but it is not required to make the guide useful now
 
 ## What every serious harness needs
 
@@ -87,7 +96,7 @@ MCP, sub-agents, slash commands, and IDE bridges. Capability grows fast here, bu
 
 - Turn dense reverse-engineering notes into readable public documentation.
 - Give developers a common vocabulary for harness engineering.
-- Make the best patterns portable across Python, TypeScript, Rust, and other stacks.
+- Make the best patterns practical for Python builders first.
 - Help people build their own tooling instead of copying surfaces blindly.
 
 ## Read by system
@@ -116,6 +125,21 @@ MCP, sub-agents, slash commands, and IDE bridges. Capability grows fast here, bu
 
 </div>
 
+## OpenAI reference layer
+
+The site uses the official Responses API as the default OpenAI reference surface for:
+
+- tool calls
+- long-running work
+- streaming responses
+- conversation continuity
+- built-in tools and remote MCP
+
+Start here:
+
+- [OpenAI Responses API](blueprint/openai-responses-api.md)
+- [Python Path](start-here/python-path.md)
+
 ## Build better
 
 These pages translate the blueprint into concrete design principles for new projects:
@@ -132,12 +156,12 @@ These pages translate the blueprint into concrete design principles for new proj
 
 <div class="hg-panel" markdown>
 ### If you are building from scratch
-Start with harness fundamentals, then read Tool System, Query Engine, Permissions, and Session State in that order.
+Start with the Python path, then read Tool System, Query Engine, Permissions, and Session State in that order.
 </div>
 
 <div class="hg-panel" markdown>
 ### If you already have an agent
-Go straight to Tool Execution Pipeline, Bootstrap, MCP, and IDE Bridge to tighten the runtime around what you already ship.
+Go straight to Tool Execution Pipeline, Bootstrap, MCP, and IDE Bridge to tighten the runtime around what you already ship in Python.
 </div>
 
 <div class="hg-panel" markdown>
@@ -157,9 +181,10 @@ Use the blueprint pages as source material, then publish implementation guides, 
 ## Recommended reading path
 
 1. Start with [What Is An Agent Harness?](start-here/what-is-an-agent-harness.md)
-2. Read [How To Read The Blueprint](start-here/reading-the-blueprint.md)
-3. Dive into [Blueprint Overview](blueprint/index.md)
-4. Use [Build Better Principles](build-better/principles.md) when shaping your own implementation
+2. Read [Python Path](start-here/python-path.md)
+3. Use [OpenAI Responses API](blueprint/openai-responses-api.md) for the model and tool layer
+4. Dive into [Blueprint Overview](blueprint/index.md)
+5. Use [Build Better Principles](build-better/principles.md) when shaping your own implementation
 
 ## Why this can travel
 
@@ -173,4 +198,4 @@ That is the standard for this site.
 
 ## Status
 
-This site is structured to grow into a proper public docs hub. The blueprint is already here in both chapter pages and the complete long-form reference. The next layer is more synthesis, diagrams, comparative guides, and implementation walkthroughs.
+This site is structured to grow into a proper public docs hub. The blueprint is already here in chapter pages and the complete long-form reference, but the reader path is now Python-first and implementation-oriented.

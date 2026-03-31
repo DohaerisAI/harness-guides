@@ -13,15 +13,16 @@ That interest is useful only if it becomes better engineering. This guide is wri
 Read it in passes:
 
 1. First pass: scan the chapter headings and understand the system boundaries.
-2. Second pass: focus on the runtime slices you need right now, such as tools, query loop, or permissions.
-3. Third pass: extract reusable patterns into your own implementation notes.
+2. Second pass: focus on the Python implementation sections for the runtime slices you need right now, such as tools, query loop, or permissions.
+3. Third pass: use the Responses API mapping sections to turn those patterns into a working model and tool loop.
+4. Fourth pass: dip into the full blueprint only when you want source-level provenance or historical context.
 
 ## What the blueprint is good for
 
 - understanding how a real agent CLI is wired
 - seeing where architectural complexity actually lives
 - learning what belongs in the harness instead of the prompt
-- identifying patterns worth porting into your own stack
+- identifying patterns worth porting into your own Python stack
 
 ## What it is not
 

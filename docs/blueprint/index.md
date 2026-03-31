@@ -1,6 +1,6 @@
 # Blueprint Overview
 
-The full blueprint is organized around the major systems inside an agent CLI:
+The blueprint is organized around the major systems inside an agent CLI, but the current teaching path is intentionally Python-first.
 
 1. Tool system
 2. Tool execution pipeline
@@ -14,6 +14,15 @@ The full blueprint is organized around the major systems inside an agent CLI:
 10. Terminal UI
 11. IDE bridge protocol
 12. Memory and cost tracking
+
+## Python-first route
+
+- [OpenAI Responses API](openai-responses-api.md)
+- [Chapter 1: Tool System](chapters/tool-system.md)
+- [Chapter 3: Query Engine](chapters/query-engine.md)
+- [Chapter 5: Permissions](chapters/permissions.md)
+- [Chapter 6: Session and State](chapters/session-and-state.md)
+- [Chapter 8: MCP Integration](chapters/mcp-integration.md)
 
 ## Reading tracks
 
@@ -53,6 +62,7 @@ The full blueprint is organized around the major systems inside an agent CLI:
 - [Chapter 10: Terminal UI](chapters/terminal-ui.md)
 - [Chapter 11: IDE Bridge](chapters/ide-bridge.md)
 - [Chapter 12: Memory and Cost](chapters/memory-and-cost.md)
+- [Source Provenance](reference-provenance.md)
 - [Appendix](chapters/appendix.md)
 
 ## Use this section when
@@ -65,6 +75,6 @@ The main document still lives at [Full Blueprint](full-blueprint.md), but the ch
 
 ## How to use this section
 
-- Use the chapter pages when you want quick architectural orientation.
-- Use the full blueprint when you want the exact long-form walkthrough.
+- Use the chapter pages when you want Python-first implementation guidance.
+- Use the full blueprint when you want the exact long-form walkthrough and source-level provenance.
 - Use the build-better pages when you want to convert observations into design rules for your own harness.

@@ -1,30 +1,52 @@
 # Chapter 9: Slash Command System
 
-Slash commands are the human-facing command grammar of the harness. This chapter covers command types, the registry, and skill loading.
+Slash commands are the human-facing command grammar of the harness. In Python, they are often the simplest place to keep structured user intent out of freeform chat.
 
-## What this chapter covers
+## Why this system exists
 
-- command types
-- command registry
-- skill loading
-- minimal implementation guidance
+Once users rely on repeatable workflows, they need more than conversational luck. Slash commands give the harness a discoverable, structured entry surface.
 
-## Why it matters
+## Shared architecture
 
-Commands are often the first structured interface users touch. A clean command system turns the harness into a coherent tool instead of a chat box with accidental conventions.
+- commands map user intent to runtime actions
+- registry and discovery should be centralized
+- command execution should pass through the same safety and state boundaries as chat-originated work
 
-## Key ideas
+## Python implementation
 
-- keep command registration centralized
-- separate built-in commands from dynamic skills cleanly
-- make command discovery easy for users
-- ensure command execution integrates with the same runtime safety model
+Use one registry that can dispatch:
 
-## Read the full chapter
+- local built-ins like `/help`
+- workflow commands like `/resume`
+- higher-level automation commands that still enter the query loop or tool executor
+
+Keep command handlers small and explicit. They should call runtime systems, not replace them.
+
+## OpenAI Responses API mapping
+
+Commands are usually a runtime feature, not a Responses API feature. But they often end in one of two actions:
+
+- mutate local runtime state
+- call the model through `responses.create`
+
+That means command outputs should already be shaped for the same loop and transcript system used by freeform requests.
+
+## Failure modes and tradeoffs
+
+- command logic bypasses core runtime state
+- hidden commands with no discoverability
+- command handlers that duplicate query-loop logic
+- commands becoming a second permission model
+
+## Build-it-yourself checklist
+
+- define one command registry
+- keep handlers small
+- route command effects through existing runtime systems
+- make command discovery easy
+- avoid a second parallel architecture just for commands
+
+## Reference provenance
 
 - [Open this chapter inside the full blueprint](../full-blueprint.md#chapter-9-slash-command-system)
-- Key subsections:
-  - `9.1` Command Types
-  - `9.2` Command Registry
-  - `9.3` Skill Loading
-  - `9.4` Build It Yourself
+- the source discovery here centered on command registry patterns and skill loading

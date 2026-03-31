@@ -38,4 +38,6 @@ Good harnesses make models feel sharper because the environment is coherent. Bad
 - good docs for contributors
 - architecture that survives scale
 
-Harness engineering sits between AI UX, systems design, and developer tooling. That is why it deserves its own documentation layer.
+## Why this guide is Python-first
+
+The most useful version of this site right now is the one that helps people ship. That means explaining the architecture in Python terms first, then mapping the model and tool layer to OpenAI's Responses API, instead of leaving readers trapped in TypeScript-shaped analysis.

@@ -1,32 +1,50 @@
 # Chapter 11: IDE Bridge Protocol
 
-The IDE bridge lets the harness operate beyond the terminal. This chapter covers the bridge architecture, key types, spawn modes, permission proxying, and backoff behavior.
+The IDE bridge lets the harness operate beyond the terminal. In Python terms, this chapter is about keeping a protocol boundary clean when the harness is no longer the only process in the room.
 
-## What this chapter covers
+## Why this system exists
 
-- bridge architecture
-- key protocol types
-- spawn modes
-- permission proxying
-- backoff configuration
+Once the harness is speaking to an IDE or editor companion, protocol clarity matters as much as tool clarity. Otherwise permissions, state, and process ownership become muddy fast.
 
-## Why it matters
+## Shared architecture
 
-Once an agent spans both terminal and IDE surfaces, protocol clarity matters as much as tool clarity. Weak bridge design produces race conditions and inconsistent trust behavior.
+- define typed request/response messages
+- separate spawn control from ongoing session messages
+- preserve permission boundaries across the bridge
+- define reconnect and degraded behavior up front
 
-## Key ideas
+## Python implementation
 
-- make the bridge protocol typed and explicit
-- proxy permissions without hiding who made the decision
-- define spawn modes clearly
-- treat reconnection and backoff as product behavior
+Use a small protocol model rather than ad hoc JSON blobs everywhere. Even if the transport is simple, the message taxonomy should be explicit:
 
-## Read the full chapter
+- spawn session
+- send user input
+- request permission
+- send tool or progress event
+- close session
+
+Keep the bridge thin. It should move structured runtime messages, not reinvent the harness.
+
+## OpenAI Responses API mapping
+
+The bridge does not replace Responses API. It carries harness events and user actions between surfaces while the Python runtime continues to own model calls, tool execution, and permission policy.
+
+## Failure modes and tradeoffs
+
+- protocol types are implicit
+- permissions look local when they were really bridged
+- reconnect behavior is undefined
+- the IDE side becomes a second runtime instead of a client surface
+
+## Build-it-yourself checklist
+
+- define typed bridge messages
+- separate spawn from turn traffic
+- preserve permission provenance
+- define reconnect and shutdown behavior
+- keep the bridge thin and explicit
+
+## Reference provenance
 
 - [Open this chapter inside the full blueprint](../full-blueprint.md#chapter-11-ide-bridge-protocol)
-- Key subsections:
-  - `11.1` Architecture
-  - `11.2` Key Types
-  - `11.3` Spawn Modes
-  - `11.4` Permission Proxying
-  - `11.5` Backoff Configuration
+- the source discovery here came from bridge message types, spawn modes, permission proxying, and backoff rules

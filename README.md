@@ -6,7 +6,7 @@ Live site: https://dohaerisai.github.io/harness-guides/
 
 Harness Guides is a public documentation project for engineers studying how serious agent runtimes are actually built. It focuses on the runtime layer around the model: tools, permissions, execution pipelines, query loops, state, sessions, multi-agent orchestration, MCP, bridge protocols, memory, and cost tracking.
 
-The goal is simple: turn dense harness reverse-engineering into docs people can read, reuse, and build from.
+The current teaching path is intentionally **Python-first**. The site keeps the original architecture blueprint for provenance, but the chapter pages now focus on how to build these systems in Python, using OpenAI's Responses API as the default concrete model and tool interface.
 
 ## Why this exists now
 
@@ -16,8 +16,9 @@ This repository takes the useful path: study the architecture, extract the patte
 
 ## What is here
 
-- A full long-form blueprint for building an AI agent CLI
+- A Python-first blueprint for building an AI agent CLI
 - Chapter-based navigation across the major runtime systems
+- OpenAI Responses API reference notes tied to the chapter flow
 - Builder-first design principles for making harnesses safer and more durable
 - A live docs site built with `MkDocs Material` and deployed on GitHub Pages
 
@@ -25,6 +26,7 @@ This repository takes the useful path: study the architecture, extract the patte
 
 - [Live documentation site](https://dohaerisai.github.io/harness-guides/)
 - [Blueprint overview](https://dohaerisai.github.io/harness-guides/blueprint/)
+- [Python path](https://dohaerisai.github.io/harness-guides/start-here/python-path/)
 - [Full blueprint](https://dohaerisai.github.io/harness-guides/blueprint/full-blueprint/)
 - [Build better principles](https://dohaerisai.github.io/harness-guides/build-better/principles/)
 
@@ -80,9 +82,9 @@ Push to `main` and let the GitHub Actions workflow in `.github/workflows/docs.ym
 
 ## Current direction
 
-The site already includes the full blueprint and chapter navigation. The next layer is more synthesis:
+The site includes the full blueprint as source provenance, but the main reader path is now Python-first. The next layer is more synthesis:
 
 - better diagrams
-- implementation walkthroughs
-- comparative harness patterns
+- end-to-end Python implementation walkthroughs
+- minimal harness starter code
 - contribution-oriented docs for future collaborators

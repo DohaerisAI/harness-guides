@@ -70,8 +70,10 @@ nav:
   - Start Here:
       - What Is An Agent Harness?: start-here/what-is-an-agent-harness.md
       - Reading The Blueprint: start-here/reading-the-blueprint.md
+      - Python Path: start-here/python-path.md
   - Blueprint:
       - Overview: blueprint/index.md
+      - OpenAI Responses API: blueprint/openai-responses-api.md
       - "Chapter 1: Tool System": blueprint/chapters/tool-system.md
       - "Chapter 2: Tool Execution Pipeline": blueprint/chapters/tool-execution-pipeline.md
       - "Chapter 3: Query Engine": blueprint/chapters/query-engine.md
@@ -84,6 +86,7 @@ nav:
       - "Chapter 10: Terminal UI": blueprint/chapters/terminal-ui.md
       - "Chapter 11: IDE Bridge": blueprint/chapters/ide-bridge.md
       - "Chapter 12: Memory and Cost": blueprint/chapters/memory-and-cost.md
+      - Source Provenance: blueprint/reference-provenance.md
       - Appendix: blueprint/chapters/appendix.md
       - Full Blueprint: blueprint/full-blueprint.md
   - Build Better:
