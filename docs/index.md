@@ -6,9 +6,9 @@ Build better AI agent harnesses.
 
 <p class="hg-kicker">Runtime architecture for serious agent builders</p>
 
-<h2>Turn harness reverse-engineering into docs people actually read.</h2>
+<h2>Claude Code got exposed. Here’s the harness blueprint builders actually need.</h2>
 
-<p class="hg-lede">Harness Guides is a public docs site for engineers studying agent runtimes, tool execution, permissions, session management, and multi-agent orchestration. The point is to extract durable patterns, explain them cleanly, and help people build better systems faster.</p>
+<p class="hg-lede">After the March 31, 2026 reporting, a lot of people wanted to know how serious agent runtimes actually work. Harness Guides turns that moment into practical documentation for building better harnesses.</p>
 
 <div class="hg-signal-row" markdown>
 
@@ -21,7 +21,7 @@ Build better AI agent harnesses.
 <div class="hero-actions" markdown>
 
 [Read the Blueprint](blueprint/full-blueprint.md){ .md-button .md-button--primary }
-[Browse Chapters](blueprint/index.md){ .md-button }
+[Start Building](blueprint/index.md){ .md-button }
 [Start Here](start-here/what-is-an-agent-harness.md){ .md-button }
 
 </div>
