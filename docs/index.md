@@ -55,7 +55,7 @@ not "how do I copy one product?"
 
 but "how do serious agent harnesses actually work?"
 
-Harness Guides exists to answer the second question. The goal is to study the architecture, extract the durable patterns, and turn them into public documentation that helps people build better systems.
+Harness Guides exists to answer the second question. The goal is to study the architecture, extract the durable patterns, and turn them into public documentation that helps people build better systems intentionally.
 
 ## What every serious harness needs
 
